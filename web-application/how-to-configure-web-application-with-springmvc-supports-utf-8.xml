@@ -1,5 +1,5 @@
 ﻿How to configure Web Application with SpringMVC supports UTF-8?
-------------------------------------------------
+---------------------------------------------------------------
 Make sure you register Spring's CharacterEncodingFilter in your web.xml
 
 <filter>
@@ -14,3 +14,8 @@ Make sure you register Spring's CharacterEncodingFilter in your web.xml
       <filter-name>characterEncodingFilter</filter-name>
       <url-pattern>/*</url-pattern>
 </filter-mapping>
+
+Your JPS file must have encoding utf-8:
+  + Save the file with encoding utf-8
+  + Encoding at header JSP file
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
